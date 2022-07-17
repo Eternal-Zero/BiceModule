@@ -1,6 +1,6 @@
 resource "aws_elastic_beanstalk_application" "biceapp" {
   name        = var.bice_name_application
-  description = "tf-test-desc"
+  description = "Django test server"
 }
 
 resource "aws_elastic_beanstalk_environment" "biceenv" {
