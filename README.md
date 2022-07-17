@@ -19,7 +19,7 @@ El modulo se divide en 5 archivos encargados de la descripcion del entorno de Be
 - output.tf
 - provider.tf
 
-Adicionalmente se incluye un archivos 'app.zip' que contiene un proyecto inicializado de Django para ser cargado en el ambiente posterior a su despliegue para validar el funcionamiento de este.
+Adicionalmente se incluye un archivos 'app.zip' que contiene un proyecto inicializado de Django para ser cargado en el ambiente posterior a su despliegue para validar el funcionamiento de este. Este utiliza Django 2.2, que es compatible con el stack descrito en las variables, en caso de cambiarlo, el proyecto no funcionara.
 
 ----------
 
@@ -35,6 +35,17 @@ Dentro del archivo main, se referencian variables empleadas para la construccion
 - instance_type: El tipo de instancia a utilizar por la EC2.
 
 **Nota:** Dentro del archivo main, se define el rol del servicio utilizado para la generacion del entorno, este tiene por valor 'aws-elasticbeanstalk-ec2-role', en caso de no ser asi en la cuenta AWS utilizada, es necesario cambiar el nombre del rol.
+
+--------
+
+## Ejecucion
+
+```
+  terraform init
+  terraform validate
+  terraform plan
+  terraform apply
+```
 
 --------
 
